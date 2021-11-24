@@ -26,6 +26,7 @@
    not `console.log()` them.<br>
    <br>
    To test this function `console.log()` the results:<br>
+   <br>
    ```javascript
    function playRound(playerSelection, computerSelection) {
      // your code here!
