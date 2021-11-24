@@ -24,8 +24,8 @@
       <br>
 5. **Important Note:** you want to `return` the results of this function call,
    not `console.log()` them.<br>
-   To test this function `console.log()` the results:<br>
    <br>
+   To test this function `console.log()` the results:<br>
    ```javascript
    function playRound(playerSelection, computerSelection) {
      // your code here!
