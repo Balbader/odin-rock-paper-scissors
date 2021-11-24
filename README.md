@@ -2,7 +2,7 @@
 
 ## Assignment
 
-1. Start a new Git repo for your project.
+1. Start a new Git repo for your project.<br>
    <br>
 2. Create a blank HTML document with a script tag (Hint: it is best practice
    to link an external .js file). This game is going to be played completely from
@@ -25,7 +25,6 @@
 5. **Important Note:** you want to `return` the results of this function call,
    not `console.log()` them. To test this function console.log the results:<br>
    <br>
-   <br>
    ```javascript
    function playRound(playerSelection, computerSelection) {
      // your code here!
@@ -35,7 +34,6 @@
    console.log(playRound(playerSelection, computerSelection));
    ```
    <br>
-   <br>
 6. Write a NEW function called `game()`. Use the previous function inside of
    this one to play a 5 round game that keeps score and reports a winner or loser
    at the end.<br>
@@ -44,12 +42,12 @@
       calls… if you already know about loops from somewhere else (or if you feel
       like doing some more learning) feel free to use them. If not, don’t worry!
       Just call your `playRound` function 5 times in a row. Loops are covered in
-      the next lesson.
+      the next lesson.<br>
       <br>
    2. At this point you should be using `console.log()` to display the results
-      of each round and the winner at the end.
+      of each round and the winner at the end.<br>
       <br>
-   3. Use `prompt()` to get input from user.
+   3. Use `prompt()` to get input from user.<br>
       <br>
    4. Feel free to re-work your previous functions if you need to. Specifically,
       you might want to change the return value to something more useful.<br>
