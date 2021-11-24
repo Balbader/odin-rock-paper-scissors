@@ -23,7 +23,8 @@
       (so users can input `rock`, `ROCK`, `RocK` or any other variation).<br>
       <br>
 5. **Important Note:** you want to `return` the results of this function call,
-   not `console.log()` them. To test this function console.log the results:<br>
+   not `console.log()` them.<br>
+   To test this function `console.log()` the results:<br>
    <br>
    ```javascript
    function playRound(playerSelection, computerSelection) {
