@@ -41,4 +41,48 @@ const playRound = () => {
   }
 };
 
-const game = () => {};
+// Create a 5 rounders game() function + score keeping
+const game = () => {
+  let playerScore = 0;
+  let computerScore = 0;
+  for (let gameRound = 1; gameRound < 6; gameRound++) {
+    let res = playRound();
+
+    if (res === 1) {
+      playerScore++;
+      console.log(`Game Round: ${gameRound}`);
+      console.log(`Player Score: ${playerScore}`);
+      console.log(`Computer Score: ${computerScore}`);
+      console.log("\n");
+    }
+
+    if (res === 0) {
+      computerScore++;
+      console.log(`Game Round: ${gameRound}`);
+      console.log(`Player Score: ${playerScore}`);
+      console.log(`Computer Score: ${computerScore}`);
+      console.log("\n");
+    }
+
+    if (res === "=") {
+      playerScore = playerScore;
+      computerScore = computerScore;
+      console.log(`Game Round: ${gameRound}`);
+      console.log(`Player Score: ${playerScore}`);
+      console.log(`Computer Score: ${computerScore}`);
+      console.log("\n");
+    }
+  }
+  if (playerScore > computerScore) {
+    console.log(`Player Final Score: ${playerScore}`);
+    console.log(`Computer Final Score: ${computerScore}`);
+    console.log("Congratulations! You Win ^^");
+  }
+  if (playerScore < computerScore) {
+    console.log(`Player Final Score: ${playerScore}`);
+    console.log(`Computer Final Score: ${computerScore}`);
+    console.log("Oh No! You Loose...");
+  }
+};
+
+game();
