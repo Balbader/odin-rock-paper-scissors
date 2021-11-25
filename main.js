@@ -47,7 +47,6 @@ const game = () => {
   let computerScore = 0;
   for (let gameRound = 1; gameRound < 6; gameRound++) {
     let res = playRound();
-
     if (res === 1) {
       playerScore++;
       console.log(`Game Round: ${gameRound}`);
@@ -55,7 +54,6 @@ const game = () => {
       console.log(`Computer Score: ${computerScore}`);
       console.log("\n");
     }
-
     if (res === 0) {
       computerScore++;
       console.log(`Game Round: ${gameRound}`);
@@ -63,7 +61,6 @@ const game = () => {
       console.log(`Computer Score: ${computerScore}`);
       console.log("\n");
     }
-
     if (res === "=") {
       playerScore = playerScore;
       computerScore = computerScore;
