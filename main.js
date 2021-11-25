@@ -5,6 +5,14 @@ const computerPlay = () => {
   return randomAnswer;
 };
 
+const getAnswer = () => {
+  // Declare variables for play
+  const playerSelection = prompt(
+    "Enter Selection Number: 0.Rock - 1.Paper - 2.Scissors"
+  );
+  const computerSelection = computerPlay();
+};
+
 //Function that plays a single round of the game
 const playRound = (playerSelection, computerSelection) => {
   const selection = ["Rock", "Paper", "Scissors"];
@@ -23,33 +31,35 @@ const game = () => {
   let computerScore = 0;
   const selection = ["Rock", "Paper", "Scissors"];
 
-  // Declare variables for play
-  const playerSelection = prompt(
-    "Enter Selection Number: 0.Rock - 1.Paper - 2.Scissors"
-  );
-  const computerSelection = computerPlay();
+  getAnswer();
 
   for (let i = 1; i <= 5; i++) {
     const round = playRound(playerSelection, computerSelection);
-    if (round === "Try again! You both picked the same answer.") {
+    if (playerSelection === round) {
       count += 1;
-      console.log(round);
+      console.log(`Count: ${count}`);
+      getAnswer();
       playRound(playerSelection, computerSelection);
-    } else if (
-      round ===
-      `You Win! ${selection[playerSelection]} beats ${selection[computerSelection]}`
-    ) {
+    }
+    if (playerSelection > round) {
       count += 1;
       playerScore += 1;
-      console.log(`Your answer is ${array[playerSelection]}.`);
-      console.log(round);
+      console.log(`Your answer is ${selection[playerSelection]}.`);
+      console.log(`Count: ${count}`);
+      console.log(`Player Score: ${playerScore}`);
+      getAnswer();
       playRound(playerSelection, computerSelection);
-    } else {
-      count += 1;
-      computerScore += 1;
-      console.log(`The computer answer is ${array[computerSelection]}.`);
-      console.log(round);
-      playRound(playerSelection, computerSelection);
+    }
+    if (playerSelection < round) {
+      {
+        count += 1;
+        computerScore += 1;
+        console.log(`The computer answer is ${selection[computerSelection]}.`);
+        console.log(`Count: ${count}`);
+        console.log(`Computer Score: ${computerScore}`);
+        getAnswer();
+        playRound(playerSelection, computerSelection);
+      }
     }
   }
 };
