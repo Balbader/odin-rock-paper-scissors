@@ -1,9 +1,4 @@
-// Generate random answer for computer
-const computerPlay = () => {
-	const array = ['Rock', 'Paper', 'Scissors'];
-	const randomAnswer = Math.floor(Math.random() * array.length);
-	return randomAnswer;
-};
+import {computerPlay} from './utils.js';
 
 // Function that plays a single round of the game
 const playRound = () => {
