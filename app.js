@@ -7,11 +7,9 @@ const computerPlay = () => {
 
 // Function that plays a single round of the game
 const playRound = () => {
-	// Let playerSelection = prompt(
-	// "Enter Selection: 0.Rock - 1.Paper - 2.Scissors"
-	// );
-	let playerSelection = document.createElement('div');
-
+	let playerSelection = prompt(
+		'Enter Selection: 0.Rock - 1.Paper - 2.Scissors',
+	);
 	const computerSelection = computerPlay();
 	const selection = ['Rock', 'Paper', 'Scissors'];
 	if (playerSelection > 2) {
