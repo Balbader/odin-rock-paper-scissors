@@ -87,4 +87,7 @@ const game = () => {
   }
 };
 
-game();
+const play = document.querySelector("#play");
+play.addEventListener("click", () => {
+  game();
+});
