@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  background-image: url("https://cdn.pixabay.com/photo/2020/08/07/15/36/matrix-5470930_1280.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+  font-family: roboto, arial, sans-serif;
+}
