@@ -5,17 +5,18 @@ const computerPlay = () => {
 	return randomAnswer;
 };
 
-const getAnswer = buttons => new Promise(resolve => {
-	for (const button of buttons) {
-		button.addEventListener(
-			'click',
-			evt => {
-				resolve(evt.currentTarget);
-			},
-			{once: true},
-		);
-	}
-});
+const getAnswer = buttons =>
+	new Promise(resolve => {
+		for (const button of buttons) {
+			button.addEventListener(
+				'click',
+				evt => {
+					resolve(evt.currentTarget);
+				},
+				{once: true},
+			);
+		}
+	});
 
 // Function that plays a single round of the game
 const playRound = async () => {
